@@ -21,13 +21,16 @@
   <span v-if="testsIsLoading">Loading...</span>
   <span v-else-if="testsIsError">Oops: {{ testsError?.message }}</span>
 
-  <ul v-else-if="tests" class="mt-4 border">
+  <ul v-else-if="tests && tests.length > 0" class="mt-4 border">
     <li v-for="(item, index) in tests" :key="index" class="w-full p-4 hover:bg-gray-200">
       <span class="">Id: {{ item.id }}</span>
       <span class="ml-4">Title: {{ item.title }}</span>
       <span class="ml-4">Status: {{ item.status }}</span>
     </li>
   </ul>
+  <div v-else class="mt-4 border">
+    <span class="inline-block p-4">該專案無任何測驗</span>
+  </div>
 </template>
 
 <script setup lang="ts">
