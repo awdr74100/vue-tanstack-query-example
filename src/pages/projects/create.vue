@@ -47,6 +47,7 @@ const { isPending, isError, isSuccess, error, mutate } = useMutation({
   mutationFn: (newProject: Project) => createProject(newProject),
   onSuccess(newProject) {
     queryClient.setQueryData(['projects', newProject.id], newProject);
+    // queryClient.invalidateQueries({ queryKey: ['projects'] });
   },
 });
 </script>

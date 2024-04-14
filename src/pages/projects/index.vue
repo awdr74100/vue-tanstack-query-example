@@ -52,6 +52,7 @@ const {
 } = useQuery({
   queryKey: ['projects'],
   queryFn: () => fetchProjects(),
+  // staleTime: Infinity
 });
 
 function fetchTestsByProject(id: string | undefined): Promise<Test[]> {
