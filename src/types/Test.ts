@@ -1,6 +1,6 @@
 export interface Test {
-  id: number;
-  projectId: number;
+  id: string;
+  projectId: string;
   title: string;
   status: number;
 }
