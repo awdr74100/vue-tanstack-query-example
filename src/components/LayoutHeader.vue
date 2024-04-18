@@ -20,5 +20,6 @@ const routes = [
   '/projects/4',
   '/tests/create',
   '/projects/create',
+  '/users',
 ];
 </script>
