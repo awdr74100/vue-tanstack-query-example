@@ -21,5 +21,6 @@ const routes = [
   '/tests/create',
   '/projects/create',
   '/users',
+  '/todos'
 ];
 </script>
